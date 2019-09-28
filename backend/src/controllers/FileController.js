@@ -1,6 +1,6 @@
 const File = require("../models/File");
 
-class FileControlle {
+class FileController {
     async store(req, res) {
         console.log(req.file);
         //criar arquivo
