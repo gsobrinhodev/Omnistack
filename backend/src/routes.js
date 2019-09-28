@@ -10,6 +10,7 @@ const FileController = require('./controllers/FileController');
 routes.post("/boxes", BoxController.store);
 routes.post(
     "/files",
+    // "/boxes/:id/files",
     multer(multerConfig).single('file'),
     FileController.store);
 
