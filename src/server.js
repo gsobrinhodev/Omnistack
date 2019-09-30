@@ -27,7 +27,7 @@ app.use((req, res, next) => {
     return next(); // Sem o next, as requisições iriam parar aqui.
 });
 
- app.get ('/', (req, res) => res.send('To rondando na raiz, manda a rota!'));
+// app.get ('/', (req, res) => res.send('To rondando na raiz, manda a rota!'));
 
 app.use(cors());
 app.use(express.json());
