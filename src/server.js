@@ -27,14 +27,21 @@ app.use((req, res, next) => {
     return next(); // Sem o next, as requisições iriam parar aqui.
 });
 
-// app.get ('/', (req, res) => res.send('To rondando na raiz, manda a rota!'));
 
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true })); // Permite envio de arquivos
 app.use('/files', express.static(path.resolve(__dirname, '..', 'tmp')));
 
-app.use('/', routes);
+app.use(routes);
 
 // app.listen(3333);    
 server.listen(process.env.PORT || 3333); // A Aplicação já houve protocolo http e websocket
+
+//Link do aplicativo na mão, para pegar no command line
+//yarn heroku git:remote -a gsomnistack-backend
+
+//Sincronizando o código local com o código no heroku, o aplicativo linkado antes
+//git push heroku master
+
+//yarn heroku --logstail

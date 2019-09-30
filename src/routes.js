@@ -7,7 +7,7 @@ const routes = express.Router();
 const BoxController = require('./controllers/BoxController');
 const FileController = require('./controllers/FileController');
 
-routes.get ((req, res) => res.send('To rondando o routes,  Pai!'));
+routes.get ('/', (req, res) => res.send('To rondando o routes,  Pai!'));
 
 routes.post("/boxes", BoxController.store);
 routes.get("/boxes/:id", BoxController.show);
